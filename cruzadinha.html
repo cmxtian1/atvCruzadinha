@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzadinha - Cristhian & Kayky</title>
+    <style>
+        body{
+            background-color: #e3e5e2;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #cruzadinha input{
+            height: 40px;
+            width: 40px;
+            font-size:20px;
+            text-align: center;   
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .inicial{
+            height:700px;
+            border-bottom: #fafafa solid 3px;
+            display: flex;
+            justify-content: center;
+        }
+        .inicial .container{
+            height: 100%;
+            width: 80%;
+            align-items: center;
+        }
+        .inicial .box{
+            height: 67%;
+            width: 50%;
+            background-color: #03497a;
+            border: black 2px solid;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fafafa;
+        }
+        #cruzadinha{
+            margin-top: 70px;
+        }
+        .box h1{
+            font-size: 40px;
+        }
+        .box h2{
+            font-size: 30px;
+        }
+        .box img{
+            height: 70px;
+            
+        }
+        .final{
+            margin-top: 50px;
+        }
+        .final h1{
+            padding: 15px;
+            border-radius: 15px;
+            color: #fafafa;
+            background-color: #03497a;
+            text-align: center;
+            border: solid 2px black ;
+            
+        }
+        .final input{
+            border-radius: 10px;
+            border:solid #03497a 2px;
+            text-align: center;
+        }
+        button{
+            background-color: #fafafa;
+            color:#03497a;
+            font-weight: 600;
+            border-radius: 10px;
+            border:#03497a solid 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class='inicial'>
+        <div class='container'>
+            <div class='box'>
+                <h1>Cruzadinha</h1>
+                
+                <h2>Arquitetura computacional</h2>
+
+                <img src="http://www.souzaobatera.com.br/wp-content/uploads/2019/09/ICON-SETA-BRANCA-baixo.png" alt="seta para baixo">
+            </div>
+        </div>
+    </div>
+    <div class='container'>
+    <div id='cruzadinha'>
+        <input maxlength="1" placeholder="13" style="margin-left: 195px;" onkeyup="cruzadas_rr()" id="input_rr">
+        <br>
+        <input maxlength="1" placeholder="4/11" style='margin-left: 100px;' onkeyup="cruzadas_d()" id="input_d"><input maxlength="1" onkeyup="cruzadas_u()" id="input_u"><input maxlength="1" onkeyup="cruzadas_a()" id="input_a"><input maxlength="1" onkeyup="cruzadas_l()" id="input_l"><input maxlength="1" placeholder="12" onkeyup="cruzadas()" id="input_c"><input maxlength="1" onkeyup="cruzadas_o()" id="input_o"><input maxlength="1" onkeyup="cruzadas_r()" id="input_r"><input maxlength="1" onkeyup="cruzadas_e()" id="input_e">
+        <br>
+        <input maxlength="1" placeholder="2" onkeyup="cruzadas_q()" id="input_q"><input maxlength="1" style="margin-left:50px;" onkeyup="cruzadas_mm()" id="input_mm"><input maxlength="1" style="margin-left: 50px;" onkeyup="cruzadas_m()" id="input_m"><input maxlength="1" style="margin-left: 50px;" onkeyup="cruzadas_pp()" id="input_pp">
+        <br>
+        <input maxlength="1" placeholder="3" onkeyup="cruzadas_u3()" id="input_u3"><input maxlength="1" onkeyup="cruzadas_ll()" id="input_ll"><input maxlength="1" onkeyup="cruzadas_aa()" id="input_aa"><input maxlength="1" style="margin-left: 150px;" onkeyup="cruzadas_uu()" id="input_uu">
+        <br>
+        <input maxlength="1" onkeyup="cruzadas_a3()" id="input_a3">
+        <br>
+        <input maxlength="1" onkeyup="cruzadas_dd()" id="input_dd"><input maxlength="1" placeholder="10" style="margin-left: 387px;" onkeyup="cruzadas_ee()" id="input_ee">
+        <br>
+        <input maxlength="1" placeholder="8" onkeyup="cruzadas_c()" id="input_cc"><input maxlength="1" onkeyup="cruzadas_s()" id="input_s"><input maxlength="1" style="margin-left: 340px;" onkeyup="cruzadas_p()" id="input_p">
+        <br>
+        <input maxlength="1" onkeyup="cruzadas_oo()" id="input_oo"><input maxlength="1" style="margin-left: 387px;" onkeyup="cruzadas_r4()" id="input_r4"><input maxlength="1" placeholder="5" style="margin-left: 47px;" onkeyup="cruzadas_m5()" id="input_m5">
+        <br>
+        <input maxlength="1" placeholder="1" onkeyup="cruzadas_r3()" id="input_r3"><input maxlength="1" onkeyup="cruzadas_e4()" id="input_e4"><input maxlength="1" onkeyup="cruzadas_g()" id="input_g"><input maxlength="1" placeholder="6" onkeyup="cruzadas_i()" id="input_i"><input maxlength="1" onkeyup="cruzadas_ss()" id="input_ss"><input maxlength="1" onkeyup="cruzadas_t()" id="input_t"><input maxlength="1" placeholder="9" onkeyup="cruzadas_r5()" id="input_r5"><input maxlength="1" onkeyup="cruzadas_a4()" id="input_a4"><input maxlength="1" onkeyup="cruzadas_d3()" id="input_d3"><input maxlength="1" onkeyup="cruzadas_o3()" id="input_o3"><input maxlength="1" onkeyup="cruzadas_r6()" id="input_r6"><input maxlength="1" onkeyup="cruzadas_e5()" id="input_e5"><input maxlength="1" onkeyup="cruzadas_s2()" id="input_s2">
+        <br>
+        <input maxlength="1" onkeyup="cruzadas_e3()" id="input_e3" ><input maxlength="1" style="margin-left: 97px;" onkeyup="cruzadas_i7()" id="input_i7"><input maxlength="1" style="margin-left: 97px;" onkeyup="cruzadas_o4()" id="input_o4"><input maxlength="1" style="margin-left: 97px;" onkeyup="cruzadas_m4()" id="input_m4"><input maxlength="1" style="margin-left: 47px;"  onkeyup="cruzadas_m6()" id="input_m6">
+        <br>
+        <input maxlength="1" style="margin-left: 290px;" onkeyup="cruzadas_m3()" id="input_m3"><input maxlength="1" style="margin-left: 191px;" onkeyup="cruzadas_o5()" id="input_o5">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_r7()" id="input_r7">
+        <br>
+        <input maxlength="1" placeholder="7" style="margin-left: 530px;" onkeyup="cruzadas_i3()" id="input_i3"><input maxlength="1" onkeyup="cruzadas_i5()" id="input_i5">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_a5()" id="input_a5"><input maxlength="1" placeholder="16" style="margin-left:147px" onkeyup="cruzadas_d6()" id="input_d6">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_d4()" id="input_d4"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_a9()" id="input_a9">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_e7()" id="input_e7"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_tt()" id="input_tt">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_m7()" id="input_m7"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_a10()" id="input_a10">
+        <br>
+        <input maxlength="1" placeholder="14" style="margin-left: 432px;" onkeyup="cruzadas_f()" id="input_f"><input maxlength="1" onkeyup="cruzadas_l4()" id="input_l4"><input maxlength="1" onkeyup="cruzadas_a6()" id="input_a6"><input maxlength="1" onkeyup="cruzadas_s6()" id="input_s6"><input maxlength="1" onkeyup="cruzadas_h()" id="input_h"><input maxlength="1" style="margin-left:52px" onkeyup="cruzadas_bb()" id="input_bb">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_s5()" id="input_s5"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_u5()" id="input_u5">
+        <br>
+        <input maxlength="1" placeholder="15" style="margin-left: 338px;" onkeyup="cruzadas_a8()" id="input_a8"><input maxlength="1" onkeyup="cruzadas_d5()" id="input_d5"><input maxlength="1" onkeyup="cruzadas_r8()" id="input_r8"><input maxlength="1" onkeyup="cruzadas_e6()" id="input_e6"><input maxlength="1"  onkeyup="cruzadas_s3()" id="input_s3"><input maxlength="1" onkeyup="cruzadas_s4()" id="input_s4"><input maxlength="1" onkeyup="cruzadas_b()" id="input_b"><input maxlength="1" onkeyup="cruzadas_u4()" id="input_u4"><input maxlength="1" onkeyup="cruzadas_s7()" id="input_s7">
+        <br>
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_a7()" id="input_a7">
+    </div>
+    </div>
+    <div class='final'>
+        <div class='container'>
+            <div class='dicas'>
+                    <h1>Perguntas</h1>
+                <div class='pergunta'>
+                    
+                    <p>
+                        1) É a memória volátil que armazena temporariamente os arquivos com os quais você está trabalhando
+                        <br>
+                        <input id='um'> 
+                        <button onclick='val1()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        2) Quando se trata de núcleos de processamento, o Intel Core i3-10100 é considerado "____-____".
+                        <br>
+                        <input id='dois'>
+                        <button onclick='val2()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        3) É a unidade responsável pela realização das operações lógicas e aritméticas de um microprocessador.
+                        <br>
+                        <input id='tres'>
+                        <button onclick='val3()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        4) Sigla do recurso da placa mãe que capacita os periféricos a terem acesso direto à memória RAM,
+                        <br> sem sobrecarregarem o processador.
+                        <br>
+                        <input id='quatro'>
+                        <button onclick='val4()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        5) Tem como função armazenar grandes quantidades de informações.
+                        <br>
+                        <input id='cinco'>
+                        <button onclick='val5()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        6) Linha de processador da Intel de alta performance indicada para multi-tarefas, programas,edições e
+                        <br> jogos pesados.
+                        <br>
+                        <input id='seis'>
+                        <button onclick='val6()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        7) Linha de processador da Intel que introduziu o Turbo Boost.
+                        <br>
+                        <input id='sete'>
+                        <button onclick='val7()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        8) Sigla da linha de controle usada para selecionar um dos circuitos integrados entre vários conectados
+                        <br> ao mesmo barramento de computador.
+                        <br>
+                        <input id='oito'>
+                        <button onclick='val8()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        9) É uma  memória não volátil que armazena permanentemente as instruções no seu computador.
+                        <br>
+                        <input id='nove'>
+                        <button onclick='val9()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        10) É um tipo de chip de memória de computador que mantém seus dados quando a energia é desligada.
+                        <br>
+                        <input id='dez'>
+                        <button onclick='val10()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        11) Quando se trata de núcleos de processamento, o Intel Pentium Gold G6400 é considerado "____-____".
+                        <br>
+                        <input id='onze'>
+                        <button onclick='val11()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        12) É a parte de um sistema computacional, que realiza as instruções de um programa de computador,
+                        <br> para executar a aritmética básica, lógica, e a entrada e saída de dados.
+                        <br>
+                        <input id='doze'>
+                        <button onclick='val12()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        13) É a memória volátil que armazena temporariamente os arquivos com os quais você está trabalhando.
+                        <br>
+                        <input id='treze'>
+                        <button onclick='val13()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        14) É um chip de memória de computador que mantém informações armazenadas sem a necessidade
+                        <br> de uma fonte de energia.
+                        <br>
+                        <input id='quatorze'>
+                        <button onclick='val14()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        15) É a arquitetura de barramento que especifica o endereço de hardware da memória física.
+                        <br>
+                        <input id='quinze'>
+                        <button onclick='val15()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        16) É um sistema dentro de um computador ou dispositivo, consistindo em um conector ou conjunto de fios,
+                        <br> que fornece transporte para os dados.
+                        <br>
+                        <input id='dezesseis'>
+                        <button onclick='val16()'>
+                            Conferir
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function val1(){
+        var word = (um.value).toLowerCase()
+        if(word == 'registradores'){
+            alert('RESPOSTA CORRETA');
+            um.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    
+    function val2(){
+        var word = (dois.value).toLowerCase()
+        if(word == 'quad core'){
+            alert('RESPOSTA CORRETA');
+            dois.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val3(){
+        var word = (tres.value).toLowerCase()
+        if(word == 'ula'){
+            alert('RESPOSTA CORRETA');
+            tres.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val4(){
+        var word = (quatro.value).toLowerCase()
+        if(word == 'dma'){
+            alert('RESPOSTA CORRETA');
+            quatro.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val5(){
+        var word = (cinco.value).toLowerCase()
+        if(word == 'memoria de massa'){
+            alert('RESPOSTA CORRETA');
+            cinco.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val6(){
+        var word = (seis.value).toLowerCase()
+        if(word == 'i7'){
+            alert('RESPOSTA CORRETA');
+            seis.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val7(){
+        var word = (sete.value).toLowerCase()
+        if(word == 'i5'){
+            alert('RESPOSTA CORRETA');
+            sete.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val8(){
+        var word = (oito.value).toLowerCase()
+        if(word == 'cs'){
+            alert('RESPOSTA CORRETA');
+            oito.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val9(){
+        var word = (nove.value).toLowerCase()
+        if(word == 'rom'){
+            alert('RESPOSTA CORRETA');
+            nove.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val10(){
+        var word = (dez.value).toLowerCase()
+        if(word == 'eprom'){
+            alert('RESPOSTA CORRETA');
+            dez.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val11(){
+        var word = (onze.value).toLowerCase()
+        if(word == 'dual core'){
+            alert('RESPOSTA CORRETA');
+            onze.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val12(){
+        var word = (doze.value).toLowerCase()
+        if(word == 'cpu'){
+            alert('RESPOSTA CORRETA');
+            doze.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val13(){
+        var word = (treze.value).toLowerCase()
+        if(word == 'ram'){
+            alert('RESPOSTA CORRETA');
+            treze.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val14(){
+        var word = (quatorze.value).toLowerCase()
+        if(word == 'flash'){
+            alert('RESPOSTA CORRETA');
+            quatorze.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val15(){
+        var word = (quinze.value).toLowerCase()
+        if(word == 'adress bus'){
+            alert('RESPOSTA CORRETA');
+            quinze.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val16(){
+        var word = (dezesseis.value).toLowerCase()
+        if(word == 'data bus'){
+            alert('RESPOSTA CORRETA');
+            dezesseis.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+
+
+    /*INPUTS DAS CRUZA MIL GRAU*/
+    function cruzadas() {
+        var c =( input_c.value).toLowerCase();
+
+        if(c == 'c') {
+            input_c.style.backgroundColor = "green";
+        } else {
+            input_c.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_c() {
+        var cc = (input_cc.value).toLowerCase();
+
+        if(cc == 'c' ) {
+            input_cc.style.backgroundColor = "green";
+        } else {
+            input_cc.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_p() {
+        var p =( input_p.value).toLowerCase();
+
+        if(p == 'p') {
+            input_p.style.backgroundColor = "green";
+        } else {
+            input_p.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_pp() {
+        var pp = (input_pp.value).toLowerCase();
+
+        if(pp == 'p' ) {
+            input_pp.style.backgroundColor = "green";
+        } else {
+            input_pp.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_u() {
+        var u =( input_u.value).toLowerCase();
+
+        if(u == 'u') {
+            input_u.style.backgroundColor = "green";
+        } else {
+            input_u.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_uu() {
+        var uu = (input_uu.value).toLowerCase();
+
+        if(uu == 'u' ) {
+            input_uu.style.backgroundColor = "green";
+        } else {
+            input_uu.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_u3() {
+        var u3 = (input_u3.value).toLowerCase();
+
+        if(u3 == 'u' ) {
+            input_u3.style.backgroundColor = "green";
+        } else {
+            input_u3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_u4() {
+        var u4 = (input_u4.value).toLowerCase();
+
+        if(u4 == 'u' ) {
+            input_u4.style.backgroundColor = "green";
+        } else {
+            input_u4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_u5() {
+        var u5 = (input_u5.value).toLowerCase();
+
+        if(u5 == 'u' ) {
+            input_u5.style.backgroundColor = "green";
+        } else {
+            input_u5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_m() {
+        var m =( input_m.value).toLowerCase();
+
+        if(m == 'm') {
+            input_m.style.backgroundColor = "green";
+        } else {
+            input_m.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_mm() {
+        var mm = (input_mm.value).toLowerCase();
+
+        if(mm == 'm' ) {
+            input_mm.style.backgroundColor = "green";
+        } else {
+            input_mm.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_m3() {
+        var m3 = (input_m3.value).toLowerCase();
+
+        if(m3 == 'm' ) {
+            input_m3.style.backgroundColor = "green";
+        } else {
+            input_m3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_m4() {
+        var m4 = (input_m4.value).toLowerCase();
+
+        if(m4 == 'm' ) {
+            input_m4.style.backgroundColor = "green";
+        } else {
+            input_m4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_m5() {
+        var m5 = (input_m5.value).toLowerCase();
+
+        if(m5 == 'm' ) {
+            input_m5.style.backgroundColor = "green";
+        } else {
+            input_m5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_m6() {
+        var m6 = (input_m6.value).toLowerCase();
+
+        if(m6 == 'm' ) {
+            input_m6.style.backgroundColor = "green";
+        } else {
+            input_m6.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_m7() {
+        var m7 = (input_m7.value).toLowerCase();
+
+        if(m7 == 'm' ) {
+            input_m7.style.backgroundColor = "green";
+        } else {
+            input_m7.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_e() {
+        var e =( input_e.value).toLowerCase();
+
+        if(e == 'e') {
+            input_e.style.backgroundColor = "green";
+        } else {
+            input_e.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_ee() {
+        var ee = (input_ee.value).toLowerCase();
+
+        if(ee == 'e' ) {
+            input_ee.style.backgroundColor = "green";
+        } else {
+            input_ee.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_e3() {
+        var e3 = (input_e3.value).toLowerCase();
+
+        if(e3 == 'e' ) {
+            input_e3.style.backgroundColor = "green";
+        } else {
+            input_e3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_e4() {
+        var e4 = (input_e4.value).toLowerCase();
+
+        if(e4 == 'e' ) {
+            input_e4.style.backgroundColor = "green";
+        } else {
+            input_e4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_e5() {
+        var e5 = (input_e5.value).toLowerCase();
+
+        if(e5 == 'e' ) {
+            input_e5.style.backgroundColor = "green";
+        } else {
+            input_e5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_e6() {
+        var e6 = (input_e6.value).toLowerCase();
+
+        if(e6 == 'e' ) {
+            input_e6.style.backgroundColor = "green";
+        } else {
+            input_e6.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_e7() {
+        var e7 = (input_e7.value).toLowerCase();
+
+        if(e7 == 'e' ) {
+            input_e7.style.backgroundColor = "green";
+        } else {
+            input_e7.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_o() {
+        var o =( input_o.value).toLowerCase();
+
+        if(o == 'o') {
+            input_o.style.backgroundColor = "green";
+        } else {
+            input_o.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_oo() {
+        var oo = (input_oo.value).toLowerCase();
+
+        if(oo == 'o' ) {
+            input_oo.style.backgroundColor = "green";
+        } else {
+            input_oo.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_o3() {
+        var o3 = (input_o3.value).toLowerCase();
+
+        if(o3 == 'o' ) {
+            input_o3.style.backgroundColor = "green";
+        } else {
+            input_o3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_o4() {
+        var o4 = (input_o4.value).toLowerCase();
+
+        if(o4 == 'o' ) {
+            input_o4.style.backgroundColor = "green";
+        } else {
+            input_o4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_o5() {
+        var o5 = (input_o5.value).toLowerCase();
+
+        if(o5 == 'o' ) {
+            input_o5.style.backgroundColor = "green";
+        } else {
+            input_o5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r() {
+        var r =( input_r.value).toLowerCase();
+
+        if(r == 'r') {
+            input_r.style.backgroundColor = "green";
+        } else {
+            input_r.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_rr() {
+        var rr = (input_rr.value).toLowerCase();
+
+        if(rr == 'r' ) {
+            input_rr.style.backgroundColor = "green";
+        } else {
+            input_rr.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r3() {
+        var r3 = (input_r3.value).toLowerCase();
+
+        if(r3 == 'r' ) {
+            input_r3.style.backgroundColor = "green";
+        } else {
+            input_r3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r4() {
+        var r4 = (input_r4.value).toLowerCase();
+
+        if(r4 == 'r' ) {
+            input_r4.style.backgroundColor = "green";
+        } else {
+            input_r4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r5() {
+        var r5 = (input_r5.value).toLowerCase();
+
+        if(r5 == 'r' ) {
+            input_r5.style.backgroundColor = "green";
+        } else {
+            input_r5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r6() {
+        var r6 = (input_r6.value).toLowerCase();
+
+        if(r6 == 'r' ) {
+            input_r6.style.backgroundColor = "green";
+        } else {
+            input_r6.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r7() {
+        var r7 = (input_r7.value).toLowerCase();
+
+        if(r7 == 'r' ) {
+            input_r7.style.backgroundColor = "green";
+        } else {
+            input_r7.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_r8() {
+        var r8 = (input_r8.value).toLowerCase();
+
+        if(r8 == 'r' ) {
+            input_r8.style.backgroundColor = "green";
+        } else {
+            input_r8.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_i() {
+        var i =( input_i.value).toLowerCase();
+
+        if(i == 'i') {
+            input_i.style.backgroundColor = "green";
+        } else {
+            input_i.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_i3() {
+        var i3 = (input_i3.value).toLowerCase();
+
+        if(i3 == 'i' ) {
+            input_i3.style.backgroundColor = "green";
+        } else {
+            input_i3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a() {
+        var a =( input_a.value).toLowerCase();
+
+        if(a == 'a') {
+            input_a.style.backgroundColor = "green";
+        } else {
+            input_a.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_aa() {
+        var aa = (input_aa.value).toLowerCase();
+
+        if(aa == 'a' ) {
+            input_aa.style.backgroundColor = "green";
+        } else {
+            input_aa.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a3() {
+        var a3 = (input_a3.value).toLowerCase();
+
+        if(a3 == 'a' ) {
+            input_a3.style.backgroundColor = "green";
+        } else {
+            input_a3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a4() {
+        var a4 = (input_a4.value).toLowerCase();
+
+        if(a4 == 'a' ) {
+            input_a4.style.backgroundColor = "green";
+        } else {
+            input_a4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a5() {
+        var a5 = (input_a5.value).toLowerCase();
+
+        if(a5 == 'a' ) {
+            input_a5.style.backgroundColor = "green";
+        } else {
+            input_a5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a6() {
+        var a6 = (input_a6.value).toLowerCase();
+
+        if(a6 == 'a' ) {
+            input_a6.style.backgroundColor = "green";
+        } else {
+            input_a6.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a7() {
+        var a7 = (input_a7.value).toLowerCase();
+
+        if(a7 == 'a' ) {
+            input_a7.style.backgroundColor = "green";
+        } else {
+            input_a7.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a8() {
+        var a8 = (input_a8.value).toLowerCase();
+
+        if(a8 == 'a' ) {
+            input_a8.style.backgroundColor = "green";
+        } else {
+            input_a8.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a9() {
+        var a9 = (input_a9.value).toLowerCase();
+
+        if(a9 == 'a' ) {
+            input_a9.style.backgroundColor = "green";
+        } else {
+            input_a9.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_a10() {
+        var a10 = (input_a10.value).toLowerCase();
+
+        if(a10 == 'a' ) {
+            input_a10.style.backgroundColor = "green";
+        } else {
+            input_a10.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_l() {
+        var l =( input_l.value).toLowerCase();
+
+        if(l == 'l') {
+            input_l.style.backgroundColor = "green";
+        } else {
+            input_l.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_ll() {
+        var ll = (input_ll.value).toLowerCase();
+
+        if(ll == 'l' ) {
+            input_ll.style.backgroundColor = "green";
+        } else {
+            input_ll.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_l4() {
+        var l4 = (input_l4.value).toLowerCase();
+
+        if(l4 == 'l' ) {
+            input_l4.style.backgroundColor = "green";
+        } else {
+            input_l4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_g() {
+        var g =( input_g.value).toLowerCase();
+
+        if(g == 'g') {
+            input_g.style.backgroundColor = "green";
+        } else {
+            input_g.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s() {
+        var s =( input_s.value).toLowerCase();
+
+        if(s == 's') {
+            input_s.style.backgroundColor = "green";
+        } else {
+            input_s.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_ss() {
+        var ss = (input_ss.value).toLowerCase();
+
+        if(ss == 's' ) {
+            input_ss.style.backgroundColor = "green";
+        } else {
+            input_ss.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s2() {
+        var s2 = (input_s2.value).toLowerCase();
+
+        if(s2 == 's' ) {
+            input_s2.style.backgroundColor = "green";
+        } else {
+            input_s2.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s3() {
+        var s3 = (input_s3.value).toLowerCase();
+
+        if(s3 == 's' ) {
+            input_s3.style.backgroundColor = "green";
+        } else {
+            input_s3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s4() {
+        var s4 = (input_s4.value).toLowerCase();
+
+        if(s4 == 's' ) {
+            input_s4.style.backgroundColor = "green";
+        } else {
+            input_s4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s5() {
+        var s5 = (input_s5.value).toLowerCase();
+
+        if(s5 == 's' ) {
+            input_s5.style.backgroundColor = "green";
+        } else {
+            input_s5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s6() {
+        var s6 = (input_s6.value).toLowerCase();
+
+        if(s6 == 's' ) {
+            input_s6.style.backgroundColor = "green";
+        } else {
+            input_s6.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_s7() {
+        var s7 = (input_s7.value).toLowerCase();
+
+        if(s7 == 's' ) {
+            input_s7.style.backgroundColor = "green";
+        } else {
+            input_s7.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_t() {
+        var t =( input_t.value).toLowerCase();
+
+        if(t == 't') {
+            input_t.style.backgroundColor = "green";
+        } else {
+            input_t.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_tt() {
+        var tt = (input_tt.value).toLowerCase();
+
+        if(tt == 't' ) {
+            input_tt.style.backgroundColor = "green";
+        } else {
+            input_tt.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_d() {
+        var d =( input_d.value).toLowerCase();
+
+        if(d == 'd') {
+            input_d.style.backgroundColor = "green";
+        } else {
+            input_d.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_dd() {
+        var dd = (input_dd.value).toLowerCase();
+
+        if(dd == 'd' ) {
+            input_dd.style.backgroundColor = "green";
+        } else {
+            input_dd.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_d3() {
+        var d3 = (input_d3.value).toLowerCase();
+
+        if(d3 == 'd' ) {
+            input_d3.style.backgroundColor = "green";
+        } else {
+            input_d3.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_d4() {
+        var d4 = (input_d4.value).toLowerCase();
+
+        if(d4 == 'd' ) {
+            input_d4.style.backgroundColor = "green";
+        } else {
+            input_d4.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_d5() {
+        var d5 = (input_d5.value).toLowerCase();
+
+        if(d5 == 'd' ) {
+            input_d5.style.backgroundColor = "green";
+        } else {
+            input_d5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_d6() {
+        var d6 = (input_d6.value).toLowerCase();
+
+        if(d6 == 'd' ) {
+            input_d6.style.backgroundColor = "green";
+        } else {
+            input_d6.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_f() {
+        var f =( input_f.value).toLowerCase();
+
+        if(f == 'f') {
+            input_f.style.backgroundColor = "green";
+        } else {
+            input_f.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_h() {
+        var h =( input_h.value).toLowerCase();
+
+        if(h == 'h') {
+            input_h.style.backgroundColor = "green";
+        } else {
+            input_h.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_b() {
+        var b =( input_b.value).toLowerCase();
+
+        if(b == 'b') {
+            input_b.style.backgroundColor = "green";
+        } else {
+            input_b.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_bb() {
+        var bb = (input_bb.value).toLowerCase();
+
+        if(bb == 'b' ) {
+            input_bb.style.backgroundColor = "green";
+        } else {
+            input_bb.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_i5() {
+        var i_5 = (input_i5.value).toLowerCase();
+
+        if(i_5 == i) {
+            input_i5.style.backgroundColor = "green";
+        } else {
+            input_i5.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_i7() {
+        var i_7 = (input_i7.value).toLowerCase();
+
+        if(i_7 == i) {
+            input_i7.style.backgroundColor = "green";
+        } else {
+            input_i7.style.backgroundColor = "red";
+        }
+    }
+    function cruzadas_q() {
+        var q =( input_q.value).toLowerCase();
+
+        if(q == 'q') {
+            input_q.style.backgroundColor = "green";
+        } else {
+            input_q.style.backgroundColor = "red";
+        }
+    }
+</script>
