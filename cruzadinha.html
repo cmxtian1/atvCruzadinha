@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cruzadinha - Cristhian & Kayky</title>
+    <title>Cruzadinha</title>
     <style>
         body{
             background-color: #e3e5e2;
@@ -17,6 +17,7 @@
             width: 40px;
             font-size:20px;
             text-align: center;   
+            outline: none;
         }
         .container{
             display: flex;
@@ -74,6 +75,7 @@
             border-radius: 10px;
             border:solid #03497a 2px;
             text-align: center;
+            outline: none;
         }
         button{
             background-color: #fafafa;
@@ -81,6 +83,7 @@
             font-weight: 600;
             border-radius: 10px;
             border:#03497a solid 2px;
+            outline: none;
         }
     </style>
 </head>
@@ -126,9 +129,9 @@
         <br>
         <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_a5()" id="input_a5"><input maxlength="1" placeholder="16" style="margin-left:147px" onkeyup="cruzadas_d6()" id="input_d6">
         <br>
-        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_d4()" id="input_d4"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_a9()" id="input_a9">
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_d4()" id="input_d4"><input maxlength="1" id="cachec" onkeyup="cache_c()" placeholder="18"  style="margin-left:100px" type="text"><input maxlength="1" onkeyup="cruzadas_a9()" id="input_a9"><input maxlength="1" id="cachec2" onkeyup="cache_c2()" type="text"><input maxlength="1" id="cacheh" onkeyup="cache_h()" type="text"><input maxlength="1" id="cachee" onkeyup="cache_e()" type="text">
         <br>
-        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_e7()" id="input_e7"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_tt()" id="input_tt">
+        <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_e7()" id="input_e7"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_tt()" placeholder="17" id="input_tt"><input maxlength="1" id="threadh" onkeyup="thread_h()" type="text"><input maxlength="1" id="threadr" onkeyup="thread_r()" type="text"><input id="threade" maxlength="1" onkeyup="thread_e()" type="text"><input id="threada" maxlength="1" onkeyup="thread_a()" type="text"><input id="threadd" maxlength="1" onkeyup="thread_d()" type="text">
         <br>
         <input maxlength="1" style="margin-left: 530px;" onkeyup="cruzadas_m7()" id="input_m7"><input maxlength="1" style="margin-left:147px" onkeyup="cruzadas_a10()" id="input_a10">
         <br>
@@ -148,7 +151,7 @@
                 <div class='pergunta'>
                     
                     <p>
-                        1) É a memória volátil que armazena temporariamente os arquivos com os quais você está trabalhando
+                        1) É uma memória volátil localizada na CPU.
                         <br>
                         <input id='um'> 
                         <button onclick='val1()'>
@@ -278,6 +281,22 @@
                         <br>
                         <input id='dezesseis'>
                         <button onclick='val16()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        17) Entidades escalonadas para executarem na CPU.
+                        <br>
+                        <input id='dezesete'>
+                        <button onclick='val17()'>
+                            Conferir
+                        </button>
+                    </p>
+                    <p>
+                        18) Memória temporária que o chipset recupera rapidamente os dados.
+                        <br>
+                        <input id='dezoito'>
+                        <button onclick='val18()'>
                             Conferir
                         </button>
                     </p>
@@ -433,8 +452,113 @@
             alert('RESPOSTA INCORRETA')
         }
     } 
+    function val17(){
+        var word = (dezesete.value).toLowerCase()
+        if(word == 'thread'){
+            alert('RESPOSTA CORRETA');
+            dezesete.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
+    function val18(){
+        var word = (dezoito.value).toLowerCase()
+        if(word == 'cache'){
+            alert('RESPOSTA CORRETA');
+            dezoito.style.backgroundColor = '#229a00';
+        } else {
+            alert('RESPOSTA INCORRETA')
+        }
+    } 
 
 
+    // INPUTS
+
+
+    function cache_c(){
+        var c = (cachec.value).toLowerCase();
+
+        if(c == 'c') {
+            cachec.style.backgroundColor = "green";
+        } else {
+            cachec.style.backgroundColor = "red";
+        }
+    }
+
+    function cache_c2(){
+        var c = (cachec2.value).toLowerCase();
+
+        if(c == 'c') {
+            cachec2.style.backgroundColor = "green";
+        } else {
+            cachec2.style.backgroundColor = "red";
+        }
+    }
+
+    function cache_h(){
+        var h = (cacheh.value).toLowerCase();
+
+        if(h == 'h') {
+            cacheh.style.backgroundColor = "green";
+        } else {
+            cacheh.style.backgroundColor = "red";
+        }
+    }
+
+    function cache_e(){
+        var e = (cachee.value).toLowerCase();
+
+        if(e == 'e') {
+            cachee.style.backgroundColor = "green";
+        } else {
+            cachee.style.backgroundColor = "red";
+        }
+    }
+    function thread_h(){
+        var h = (threadh.value).toLowerCase();
+
+        if(h == 'h') {
+            threadh.style.backgroundColor = "green";
+        } else {
+            threadh.style.backgroundColor = "red";
+        }
+    }
+    function thread_r(){
+        var r = (threadr.value).toLowerCase();
+
+        if(r == 'r') {
+            threadr.style.backgroundColor = "green";
+        } else {
+            threadr.style.backgroundColor = "red";
+        }
+    }
+    function thread_e(){
+        var e = (threade.value).toLowerCase();
+
+        if(e == 'e') {
+            threade.style.backgroundColor = "green";
+        } else {
+            threade.style.backgroundColor = "red";
+        }
+    }
+    function thread_a(){
+        var a = (threada.value).toLowerCase();
+
+        if(a == 'a') {
+            threada.style.backgroundColor = "green";
+        } else {
+            threada.style.backgroundColor = "red";
+        }
+    }
+    function thread_d(){
+        var d = (threadd.value).toLowerCase();
+
+        if(d == 'd') {
+            threadd.style.backgroundColor = "green";
+        } else {
+            threadd.style.backgroundColor = "red";
+        }
+    }
     /*INPUTS DAS CRUZA MIL GRAU*/
     function cruzadas() {
         var c =( input_c.value).toLowerCase();
